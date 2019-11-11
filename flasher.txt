@@ -4,8 +4,8 @@
 		exit
 	fi
 	pwd
-	echo 49 >  /sys/class/gpio/export
-	echo 117 >  /sys/class/gpio/export
+	#echo 49 >  /sys/class/gpio/export
+	#echo 117 >  /sys/class/gpio/export             #commented these export gpio lines as it was taken care from the universal cape line
 	echo out > /sys/class/gpio/gpio49/direction
 	echo out > /sys/class/gpio/gpio117/direction
 	
