@@ -9,3 +9,4 @@ sudo pip install Adafruit-GPIO
 sudo pip install Adafruit_BBIO
 sudo pip install pyserial
 
+Changed the flasher code--> commented the export gpio lines as that has been taken care of in the universal cape line.
