@@ -31,6 +31,7 @@
 
 import MotorBridge
 import time
+import sys
 
 def StepperMotorATest():
     print 'Hello From MotorBridge'
@@ -49,9 +50,12 @@ def StepperMotorBTest():
     time.sleep(1)
 
     
-if __name__=="__main__":
+if sys.argv[1]=A:
     motor = MotorBridge.MotorBridgeCape()
     while True:
-        #StepperMotorATest()
+        StepperMotorATest()
+elif sys.argv[1]=B:    
+    motor = MotorBridge.MotorBridgeCape()
+    while True:
         StepperMotorBTest()
     
