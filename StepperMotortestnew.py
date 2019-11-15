@@ -36,17 +36,17 @@ import sys
 def StepperMotorATest():
     print 'Hello From MotorBridge'
     motor.StepperMotorAInit()
-    motor.StepperMotorAMove(1000,1000) # 1000 steppers  1000us every step
+    motor.StepperMotorAMove(int(sys.argv[2]),int(sys.argv[3])) # 1000 steppers  1000us every step
     time.sleep(1)
-    motor.StepperMotorAMove(-1000,1000) # 1000 steppers  1000us every step
+    motor.StepperMotorAMove(int(sys.argv[2]),int(sys.argv[3])) # 1000 steppers  1000us every step
     time.sleep(1)
     
 def StepperMotorBTest():
     print 'Hello From MotorBridge'
     motor.StepperMotorBInit()
-    motor.StepperMotorBMove(1000,1000) # 1000 steppers  1000us every step
+    motor.StepperMotorBMove(int(sys.argv[2]),int(sys.argv[3])) # 1000 steppers  1000us every step
     time.sleep(1)
-    motor.StepperMotorBMove(-1000,1000) # 1000 steppers  1000us every step
+    motor.StepperMotorBMove(int(sys.argv[2]),int(sys.argv[3])) # 1000 steppers  1000us every step
     time.sleep(1)
 
     
@@ -54,8 +54,15 @@ if sys.argv[1]=A:
     motor = MotorBridge.MotorBridgeCape()
     while True:
         StepperMotorATest()
+     
 elif sys.argv[1]=B:    
     motor = MotorBridge.MotorBridgeCape()
     while True:
+        StepperMotorBTest()
+     
+else:
+    motor = MotorBridge.MotorBridgeCape()
+    while True:
+        StepperMotorATest()
         StepperMotorBTest()
     
