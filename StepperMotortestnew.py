@@ -50,12 +50,12 @@ def StepperMotorBTest():
     time.sleep(1)
 
     
-if sys.argv[1]=A:
+if sys.argv[1] == "A":
     motor = MotorBridge.MotorBridgeCape()
     while True:
         StepperMotorATest()
      
-elif sys.argv[1]=B:    
+elif sys.argv[1] == "B":    
     motor = MotorBridge.MotorBridgeCape()
     while True:
         StepperMotorBTest()
@@ -65,4 +65,6 @@ else:
     while True:
         StepperMotorATest()
         StepperMotorBTest()
+    
+
     
